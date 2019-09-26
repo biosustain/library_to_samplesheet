@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7d8f9e3-d693-4e5f-9ff6-44883bcbfc27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/sample_library_sheets/sample_library_sheet_1.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/sample_runParameters/RunParameters.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library_to_samplesheet/adapters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.rst" beforeDir="false" afterPath="$PROJECT_DIR$/README.rst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library_to_samplesheet/library_to_samplesheet.py" beforeDir="false" afterPath="$PROJECT_DIR$/library_to_samplesheet/library_to_samplesheet.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,6 +75,8 @@
       <workItem from="1569483693109" duration="1538000" />
       <workItem from="1569487079229" duration="3906000" />
       <workItem from="1569496969152" duration="2079000" />
+      <workItem from="1569499361755" duration="165000" />
+      <workItem from="1569499561037" duration="6344000" />
     </task>
     <task id="LOCAL-00001" summary="update for some requirements">
       <created>1569487126259</created>

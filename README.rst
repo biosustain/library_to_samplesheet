@@ -4,13 +4,11 @@ library_to_samplesheet
 
 A simple package to convert library sheets used for NextSeq runs to sample sheets suitable for bcl2fastq.
 
+Not a general purpose process - meant to work only for our specific use case.
+
 
 * Free software: GNU General Public License v3
 
-Features
---------
-
-* TODO
 
 Credits
 -------
