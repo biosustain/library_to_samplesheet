@@ -125,7 +125,7 @@ def adjust_sample(sample: str, index: int) -> str:
 
 def reverse_complement(sequence: str) -> str:
     """
-    A simple function that returns a reverse complement of a give DNA (ATGC)
+    A simple function that returns a reverse complement of a given DNA (ATGC)
     sequence.
     :param sequence: all capital DNA sequence as string
     :return: reverse complemented sequence
