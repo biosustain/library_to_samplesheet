@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7d8f9e3-d693-4e5f-9ff6-44883bcbfc27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/sample_library_sheets/sample_library_sheet_1.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/sample_runParameters/RunParameters.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library_to_samplesheet/adapters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/sample_library_sheets/sample_library_sheet_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/sample_library_sheets/sample_library_sheet_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library_to_samplesheet/adapters.py" beforeDir="false" afterPath="$PROJECT_DIR$/library_to_samplesheet/adapters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library_to_samplesheet/cli.py" beforeDir="false" afterPath="$PROJECT_DIR$/library_to_samplesheet/cli.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library_to_samplesheet/library_to_samplesheet.py" beforeDir="false" afterPath="$PROJECT_DIR$/library_to_samplesheet/library_to_samplesheet.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,6 +13,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="library_to_samplesheet" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -64,6 +67,35 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="cli" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="library_to_samplesheet" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/library_to_samplesheet" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/library_to_samplesheet/cli.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.cli" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -77,6 +109,9 @@
       <workItem from="1569483693109" duration="1538000" />
       <workItem from="1569487079229" duration="3906000" />
       <workItem from="1569496969152" duration="2079000" />
+      <workItem from="1569499361755" duration="165000" />
+      <workItem from="1569499561037" duration="13295000" />
+      <workItem from="1570458240281" duration="3312000" />
     </task>
     <task id="LOCAL-00001" summary="update for some requirements">
       <created>1569487126259</created>
@@ -92,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569488015343</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="untested essentials to read runParamters.xml, library sheet and to write samplesheet.">
+      <created>1569509311952</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1569509311952</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +157,21 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="update for some requirements" />
     <MESSAGE value="unmodified copy from samplesheet.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="unmodified copy from samplesheet.py" />
+    <MESSAGE value="untested essentials to read runParamters.xml, library sheet and to write samplesheet." />
+    <option name="LAST_COMMIT_MESSAGE" value="untested essentials to read runParamters.xml, library sheet and to write samplesheet." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/library_to_samplesheet$cli.coverage" NAME="cli Coverage Results" MODIFIED="1570004827486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/library_to_samplesheet" />
   </component>
 </project>
