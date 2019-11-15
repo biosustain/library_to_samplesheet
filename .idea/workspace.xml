@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7d8f9e3-d693-4e5f-9ff6-44883bcbfc27" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sample_library_sheets/sample_library_sheet_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/sample_library_sheets/sample_library_sheet_1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_to_samplesheet/adapters.py" beforeDir="false" afterPath="$PROJECT_DIR$/library_to_samplesheet/adapters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_to_samplesheet/cli.py" beforeDir="false" afterPath="$PROJECT_DIR$/library_to_samplesheet/cli.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_to_samplesheet/library_to_samplesheet.py" beforeDir="false" afterPath="$PROJECT_DIR$/library_to_samplesheet/library_to_samplesheet.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +47,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/data/sample_runParamenters" />
       <recent name="$PROJECT_DIR$/data/sample_library_sheets" />
@@ -93,6 +93,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.cli" />
+        <item itemvalue="Python.cli" />
       </list>
     </recent_temporary>
   </component>
@@ -112,6 +113,9 @@
       <workItem from="1569499361755" duration="165000" />
       <workItem from="1569499561037" duration="13295000" />
       <workItem from="1570458240281" duration="3312000" />
+      <workItem from="1570545063712" duration="411000" />
+      <workItem from="1571039805958" duration="5000" />
+      <workItem from="1573828000749" duration="42000" />
     </task>
     <task id="LOCAL-00001" summary="update for some requirements">
       <created>1569487126259</created>
@@ -134,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569509311952</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix: typo">
+      <created>1570545117790</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1570545117790</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,7 +169,8 @@
     <MESSAGE value="update for some requirements" />
     <MESSAGE value="unmodified copy from samplesheet.py" />
     <MESSAGE value="untested essentials to read runParamters.xml, library sheet and to write samplesheet." />
-    <option name="LAST_COMMIT_MESSAGE" value="untested essentials to read runParamters.xml, library sheet and to write samplesheet." />
+    <MESSAGE value="fix: typo" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: typo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
