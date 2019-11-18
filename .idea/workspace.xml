@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d7d8f9e3-d693-4e5f-9ff6-44883bcbfc27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    <list default="true" id="d7d8f9e3-d693-4e5f-9ff6-44883bcbfc27" name="Default Changelist" comment="add regular requirements.txt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,6 +21,19 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="Dev" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
@@ -115,7 +127,7 @@
       <workItem from="1570458240281" duration="3312000" />
       <workItem from="1570545063712" duration="411000" />
       <workItem from="1571039805958" duration="5000" />
-      <workItem from="1573828000749" duration="42000" />
+      <workItem from="1573828000749" duration="7635000" />
     </task>
     <task id="LOCAL-00001" summary="update for some requirements">
       <created>1569487126259</created>
@@ -145,7 +157,21 @@
       <option name="project" value="LOCAL" />
       <updated>1570545117790</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add regular requirements.txt">
+      <created>1573828065684</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1573828065684</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add regular requirements.txt">
+      <created>1574085123046</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1574085123046</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,7 +196,8 @@
     <MESSAGE value="unmodified copy from samplesheet.py" />
     <MESSAGE value="untested essentials to read runParamters.xml, library sheet and to write samplesheet." />
     <MESSAGE value="fix: typo" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: typo" />
+    <MESSAGE value="add regular requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="add regular requirements.txt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
