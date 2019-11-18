@@ -11,11 +11,11 @@ from library_to_samplesheet.library_to_samplesheet \
 
 
 @click.command()
-@click.option('--run_parameters',
+@click.option('--run_parameters', '-r',
               help='Path to "RunParamters.xml" file.')
-@click.option('--library_sheet',
+@click.option('--library_sheet', '-l',
               help='Path to library sheet file.')
-@click.option('--output',
+@click.option('--output', '-o',
               help='Path for sample sheet output.')
 def main(run_parameters, library_sheet, output):
     """Console script for library_to_samplesheet."""
