@@ -16,7 +16,7 @@ RUN conda install -y python=3.7.3
 RUN cd /tmp && \
     git clone https://github.com/meono/library_to_samplesheet.git && \
     cd library_to_samplesheet && \
-    git checkout v0.1.1 && \
+    git checkout v0.1.2 && \
     pip install -e .
 
 CMD python run_container.py
