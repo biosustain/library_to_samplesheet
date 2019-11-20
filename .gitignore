@@ -103,3 +103,5 @@ ENV/
 
 # others
 .idea/
+/data/bcl2fastq/
+
