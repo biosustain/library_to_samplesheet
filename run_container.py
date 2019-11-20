@@ -61,12 +61,16 @@ if nextseq:
                          '--processing-threads', '8',
                          '--loading-threads', '4',
                          '--writing-threads', '4',
-                         '1>', f'{run_path}/bcl2fastq.out',
-                         '2>', f'{run_path}/bcl2fastq.err'
                          ],
                         stdout=PIPE, stderr=PIPE)
-    process_b2f.wait()
     stdout, stderr = process_b2f.communicate()
+
+    # write stdout and strerr to files
+    with open(f'{run_path}/bcl2fastq.out', 'w') outfile:
+        outfile.writelines(stdout.decode())
+    with open(f'{run_path}/bcl2fastq.err', 'w') errfile:
+        outfile.writelines(stderr.decode())
+
     # return error message is something went wrong
     if process_b2f.returncode != 0:
         print(f'Bcl2fastq failed with return code '
