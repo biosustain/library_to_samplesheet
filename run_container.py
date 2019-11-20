@@ -46,7 +46,6 @@ if nextseq:
                          '--output', f'{run_path}/SampleSheet_ready.csv',
                          ],
                         stdout=PIPE, stderr=PIPE)
-    process_l2s.wait()
     stdout, stderr = process_l2s.communicate()
     # return error message is something went wrong
     if process_l2s.returncode != 0:
@@ -61,7 +60,9 @@ if nextseq:
                          '--sample-sheet', f'{run_path}/SampleSheet_ready.csv',
                          '--processing-threads', '8',
                          '--loading-threads', '4',
-                         '--writing-threads', '4'
+                         '--writing-threads', '4',
+                         '1>', f'{run_path}/bcl2fastq.out',
+                         '2>', f'{run_path}/bcl2fastq.err'
                          ],
                         stdout=PIPE, stderr=PIPE)
     process_b2f.wait()
