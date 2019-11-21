@@ -27,7 +27,7 @@ from os import environ, makedirs
 from os.path import basename, join, exists
 from subprocess import Popen, PIPE
 from glob import glob
-from shutil import copyfile
+from shutil import copy
 from pathlib import Path
 
 # get necessary details
@@ -116,7 +116,7 @@ for sample, files in samples_to_files.items():
         full_read_path = join(full_sample_path, 'reads', 'fastq')
         makedirs(full_read_path)
         for file in files:
-            copyfile(file, full_read_path)
+            copy(file, full_read_path)
         Path(join(full_sample_path, f'{sample}.ready')).touch()
 
 # finish and report:
