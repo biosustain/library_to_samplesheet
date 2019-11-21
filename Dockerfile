@@ -1,6 +1,5 @@
 # Set the base image
-#FROM genomicpariscentre/bcl2fastq2:latest
-FROM moble/miniconda-centos@sha256:f203076a0d4660d93702b8ae13f13bf5ae0a697690e9ad623897ee260375b68c
+FROM genomicpariscentre/bcl2fastq2@sha256:50e6d0382a72e19ce9d3cf9091430499d39a89b15aefde4570dedbafcef2934c
 
 # Only for testing
 #ADD data /tmp/data
@@ -9,14 +8,22 @@ FROM moble/miniconda-centos@sha256:f203076a0d4660d93702b8ae13f13bf5ae0a697690e9a
 
 # Copy entry script
 COPY ./run_container.py /
-
+# Install miniconda based on moble/miniconda-centos
+RUN yum install -y wget bzip2 git curl grep sed dpkg gcc gcc-c++ && \
+    mkdir -p /code && \
+    echo 'export PATH=/opt/conda/bin:$PATH' > /etc/profile.d/conda.sh && \
+    wget --quiet https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O ~/miniconda.sh && \
+    /bin/bash ~/miniconda.sh -b -p /opt/conda && \
+    rm -f ~/miniconda.sh && \
+    /opt/conda/bin/conda install -y -q -n root conda-build anaconda-client && \
+    /opt/conda/bin/conda clean -y -a
+ENV PATH /opt/conda/bin:$PATH
 # Install library_to_samplesheet
-RUN conda install -y -c Freenome bcl2fastq
 RUN conda install -y python=3.7.3
 RUN cd /tmp && \
     git clone https://github.com/meono/library_to_samplesheet.git && \
     cd library_to_samplesheet && \
-    git checkout v0.1.5 && \
+    git checkout v0.1.6 && \
     pip install -e .
 
 CMD python run_container.py
