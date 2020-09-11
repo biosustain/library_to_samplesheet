@@ -50,6 +50,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/meono/library_to_samplesheet',
-    version='0.1.1',
+    version='0.1.8',
     zip_safe=False,
 )
