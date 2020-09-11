@@ -4,4 +4,4 @@
 
 __author__ = """Emre Ozdemir"""
 __email__ = 'emoz@biosustain.dtu.dk'
-__version__ = '0.1.0'
+__version__ = '0.1.1'
