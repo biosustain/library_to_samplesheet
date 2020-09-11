@@ -104,4 +104,5 @@ ENV/
 # others
 .idea/
 /data/bcl2fastq/
+.travis.yml
 

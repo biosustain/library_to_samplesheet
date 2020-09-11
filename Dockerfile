@@ -8,6 +8,7 @@ FROM genomicpariscentre/bcl2fastq2@sha256:50e6d0382a72e19ce9d3cf9091430499d39a89
 
 # Copy entry script
 COPY ./run_container.py /
+
 # Install miniconda based on moble/miniconda-centos
 RUN yum install -y wget bzip2 git curl grep sed dpkg gcc gcc-c++ && \
     mkdir -p /code && \
@@ -18,6 +19,7 @@ RUN yum install -y wget bzip2 git curl grep sed dpkg gcc gcc-c++ && \
     /opt/conda/bin/conda install -y -q -n root conda-build anaconda-client && \
     /opt/conda/bin/conda clean -y -a
 ENV PATH /opt/conda/bin:$PATH
+
 # Install library_to_samplesheet
 RUN conda install -y python=3.7.3
 RUN cd /tmp && \
@@ -26,5 +28,6 @@ RUN cd /tmp && \
     git checkout v0.1.7 && \
     pip install -e .
 
+# run script
 CMD python run_container.py
 

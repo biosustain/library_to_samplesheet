@@ -3,8 +3,12 @@
 
 A simple package to convert library sheets used for NextSeq runs to sample
  sheets suitable for bcl2fastq.
- 
-Also contains a `Dockerfile` for bcl2fastq conversion and script for it's end-to-end operation.
+
+Contains a `Dockerfile` for bcl2fastq conversion and script (`run_container
+.py`) for it's end-to-end operation in an ACI setup. Unfortunately, ACI is
+ limited in its memory options and some runs fail conversion because of it.
+
+ As an alternative, AVM is set up and a new
 
 Not a general purpose process - meant to work only for our specific use case.
 
@@ -16,4 +20,4 @@ This package was created with [Cookiecutter][Cookiecutter] and the [`audreyr/coo
 
  [Cookiecutter]: https://github.com/audreyr/cookiecutter
  [audreyr/cookiecutter-pypackage]: https://github.com/audreyr/cookiecutter-pypackage
- 
+
