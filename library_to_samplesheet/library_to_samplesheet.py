@@ -82,18 +82,19 @@ def write_sample_sheet(file_path: str, run_parameters: list, library: dict):
         index = library['[Data]'][0].split(',').index('Index2Sequence')
 
         data = ['[Data]\n'] + \
-               [adjust_data_header(library['[Data]'][0]) + '\n'] + \
-               [adjust_sample(sample, index) + '\n'
+               [adjust_data_header(library['[Data]'][0], library_prep_kit) + '\n'] + \
+               [adjust_sample(sample, index, library_prep_kit) + '\n'
                 for sample in library['[Data]'][1:]]
         file.writelines(data)
 
     return
 
 
-def adjust_data_header(header: str) -> str:
+def adjust_data_header(header: str, library_prep_kit: str) -> str:
     """
     Returns data header with adjusted column names.
     :param header: data header string
+    :param library_prep_kit: library type used to determine which headers to use
     :return: adjusted data header string
     """
     replacements = {'SampleID': 'Sample_ID',
@@ -105,22 +106,32 @@ def adjust_data_header(header: str) -> str:
                     'Index2Sequence': 'index2',
                     'Project': 'Sample_Project'
                     }
-    return ','.join([replacements[col] if col in replacements else col
-                       for col in header.split(',')])
+    if library_prep_kit == 'plexWell_i7_only':
+        return ','.join([replacements[col] if col in replacements else col
+                         for col in header.split(',')
+                         if col not in ['Index2Name', 'Index2Sequence']])
+    else:
+        return ','.join([replacements[col] if col in replacements else col
+                           for col in header.split(',')])
 
 
 
-def adjust_sample(sample: str, index: int) -> str:
+def adjust_sample(sample: str, index: int, library_prep_kit: str) -> str:
     """
     Takes in a sample line from library sheet anc adjust for use in samplesheet.
     :param sample: sample line from library sheet
     :param index: list index for Index2Sequence
+    :param library_prep_kit: library type used to determine which indexes to use
     :return: sample line suitable for samplesheet
     """
 
     sample = sample.split(',')
-    return ','.join(sample[0:index] +
-                    [reverse_complement(sample[index])] + sample[index + 1:])
+    if library_prep_kit == 'plexWell_i7_only':
+        return ','.join(sample[0:index-1])
+    else:
+        return ','.join(sample[0:index] +
+                        [reverse_complement(sample[index])] +
+                        sample[index + 1:])
 
 
 def reverse_complement(sequence: str) -> str:
