@@ -3,5 +3,7 @@ adapters = {'TruSeqHT': {'Adapter': 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCA',
             'plexWell': {'Adapter': 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCA',
                          'AdapterRead2': 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT'},
             'plexWell_i7_only': {'Adapter': 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCA',
+                         'AdapterRead2': 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT'},
+            'Custom': {'Adapter': 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCA',
                          'AdapterRead2': 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT'}
             }
