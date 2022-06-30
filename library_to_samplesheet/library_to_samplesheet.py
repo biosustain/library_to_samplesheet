@@ -72,14 +72,15 @@ def write_sample_sheet(file_path: str, run_parameters: list, library: dict):
         file.writelines([param + '\n' for param in run_parameters])
 
         # write adapters
-        library_prep_kit = library['[Header]']['LibraryPrepKit']
+        library_prep_kit = library['[Header]']['Library Prep Kit']
         settings = ['[Settings]\n'] + \
                    [f'{key},{value}\n'
                     for key, value in adapters[library_prep_kit].items()]
         file.writelines(settings)
 
         # adapt and write library data
-        index = library['[Data]'][0].split(',').index('Index2Sequence')
+        # index points to the end of data column
+        index = library['[Data]'][0].split(',').index('Sample_Project')
 
         data = ['[Data]\n'] + \
                [adjust_data_header(library['[Data]'][0], library_prep_kit) + '\n'] + \
