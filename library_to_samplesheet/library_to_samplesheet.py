@@ -56,7 +56,7 @@ def parse_library_sheet(file_path: str) -> dict:
                                 (param.split(',')[1] if ',' in param else '')
                             for param in segments['[Header]']}
 
-    return segments
+    return segments 
 
 
 def write_sample_sheet(file_path: str, run_parameters: list, library: dict):
@@ -72,14 +72,15 @@ def write_sample_sheet(file_path: str, run_parameters: list, library: dict):
         file.writelines([param + '\n' for param in run_parameters])
 
         # write adapters
-        library_prep_kit = library['[Header]']['LibraryPrepKit']
+        library_prep_kit = library['[Header]']['Library Prep Kit']
         settings = ['[Settings]\n'] + \
                    [f'{key},{value}\n'
                     for key, value in adapters[library_prep_kit].items()]
         file.writelines(settings)
 
         # adapt and write library data
-        index = library['[Data]'][0].split(',').index('Index2Sequence')
+        # index points to the end of data column
+        index = library['[Data]'][0].split(',').index('Sample_Project')
 
         data = ['[Data]\n'] + \
                [adjust_data_header(library['[Data]'][0], library_prep_kit) + '\n'] + \
@@ -106,7 +107,7 @@ def adjust_data_header(header: str, library_prep_kit: str) -> str:
                     'Index2Sequence': 'index2',
                     'Project': 'Sample_Project'
                     }
-    if library_prep_kit == 'plexWell_i7_only':
+    if library_prep_kit == 'Custom':
         return ','.join([replacements[col] if col in replacements else col
                          for col in header.split(',')
                          if col not in ['Index2Name', 'Index2Sequence']])
@@ -126,7 +127,7 @@ def adjust_sample(sample: str, index: int, library_prep_kit: str) -> str:
     """
 
     sample = sample.split(',')
-    if library_prep_kit == 'plexWell_i7_only':
+    if library_prep_kit == 'Custom':
         return ','.join(sample[0:index-1])
     else:
         return ','.join(sample[0:index] +
