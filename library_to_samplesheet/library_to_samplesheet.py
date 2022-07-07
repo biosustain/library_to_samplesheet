@@ -107,7 +107,7 @@ def adjust_data_header(header: str, library_prep_kit: str) -> str:
                     'Index2Sequence': 'index2',
                     'Project': 'Sample_Project'
                     }
-    if library_prep_kit == 'plexWell_i7_only':
+    if library_prep_kit == 'Custom':
         return ','.join([replacements[col] if col in replacements else col
                          for col in header.split(',')
                          if col not in ['Index2Name', 'Index2Sequence']])
@@ -127,7 +127,7 @@ def adjust_sample(sample: str, index: int, library_prep_kit: str) -> str:
     """
 
     sample = sample.split(',')
-    if library_prep_kit == 'plexWell_i7_only':
+    if library_prep_kit == 'Custom':
         return ','.join(sample[0:index-1])
     else:
         return ','.join(sample[0:index] +
